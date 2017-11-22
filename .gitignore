@@ -1,4 +1,6 @@
 /target/
 /drivers/
 /snaps/
-
+/.classpath
+/.settings
+/.project
