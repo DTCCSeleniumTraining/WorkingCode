@@ -1,7 +1,6 @@
 package week1.day3;
 
 public class MyCycle {
-	
 	int gear =0;
 	String model = "BSA";
 	boolean isAvaliable;
