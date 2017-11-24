@@ -3,13 +3,11 @@ package testcases;
 import org.junit.Test;
 
 import wrappers.GenericWrappers;
+import wrappers.ProjectSpecficWrapper;
 
-public class Login extends GenericWrappers{
+public class Login extends ProjectSpecficWrapper{
 	@Test
 	public void login() throws Exception{
-		invokeApp("chrome", "http:/leaftaps.com/opentaps");
-		enterById("username", "DemoSalesManager");
-		enterById("password", "crmsfa");
-		clickByClassName("decorativeSubmit");
+		login();
 	}
 }

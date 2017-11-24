@@ -1,7 +1,11 @@
 package wrappers;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -9,7 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class GenericWrappers implements Wrappers {
-
+	int i = 1;
 	RemoteWebDriver driver;
 	public void invokeApp(String browser, String url)  {
 		try {
@@ -33,7 +37,7 @@ public class GenericWrappers implements Wrappers {
 		}catch (Exception e) {
 			System.err.println("Exception");
 		} finally {
-
+			takeSnap();
 		}
 	}
 
@@ -178,20 +182,26 @@ public class GenericWrappers implements Wrappers {
 
 	@Override
 	public void takeSnap() {
-		// TODO Auto-generated method stub
-		
+		File src= driver.getScreenshotAs(OutputType.FILE);
+		File dsc = new File("./snaps/image"+i+".jpg");
+		try {
+			FileUtils.copyFile(src, dsc);
+		} catch (Exception e) {
+			System.err.println("Exception");
+		}
+		finally {
+			i++;
+		}
 	}
 
-	@Override
+	
 	public void closeBrowser() {
-		// TODO Auto-generated method stub
-
+		driver.close();
 	}
 
-	@Override
-	public void closeAllBrowsers() {
-		// TODO Auto-generated method stub
 
+	public void closeAllBrowsers() {
+		driver.quit();
 	}
 
 }
