@@ -26,7 +26,7 @@ public class GenericWrappers implements Wrappers {
 				driver = new FirefoxDriver();
 			}
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			driver.get(url);
 
 			System.out.println("The browser:" + browser + " launched successfully");
@@ -177,7 +177,6 @@ public class GenericWrappers implements Wrappers {
 	}
 
 	public void clickByLink(String name) throws Exception {
-		// TODO Auto-generated method stub
 		try {
 			driver.findElementByLinkText(name).click();
 		} catch (Exception e) {
