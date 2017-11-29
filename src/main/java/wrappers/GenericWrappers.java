@@ -272,14 +272,17 @@ public class GenericWrappers implements Wrappers {
 	}
 
 	public void closeBrowser() {
-		// TODO Auto-generated method stub
 
 		driver.close();
 
 	}
 
 	public void closeAllBrowsers() {
-		// TODO Auto-generated method stub
+		try {
+			driver.quit();
+		} catch (Exception e) {
+			throw new RuntimeException();
+		}
 
 	}
 

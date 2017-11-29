@@ -1,7 +1,5 @@
 package testcases;
 
-
-
 import org.testng.annotations.Test;
 
 import wrappers.ProjectSpecficWrapper;
@@ -10,7 +8,6 @@ public class DeleteLead extends ProjectSpecficWrapper{
 
 	@Test
 	public void deleteLead() throws Exception {
-
 		clickByLink("Leads");
 		clickByLink("Find Leads");
 		clickByXpath("//span[contains(text(),'Phone')]");

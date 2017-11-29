@@ -1,13 +1,12 @@
 package testcases;
 
-
-
 import org.testng.annotations.Test;
 
 import wrappers.ProjectSpecficWrapper;
 
 
 public class EditLead extends ProjectSpecficWrapper {	
+	
 	@Test
 	public void editLead() throws Exception{
 		clickByLink("Leads");
