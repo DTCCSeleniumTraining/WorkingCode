@@ -1,1 +1,1 @@
-java -jar selenium-server-standalone-3.8.0.jar -role hub -port 4875
+java -jar selenium-server-standalone-3.7.0.jar -role hub -port 4871
