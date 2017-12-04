@@ -19,7 +19,7 @@ public class LearnFrames {
 		WebElement frame = driver.findElementByClassName("demo-frame");
 		driver.switchTo().frame(frame);
 		driver.findElementByXPath("//li[text()='Item 4']").click();
-	//	driver.switchTo().defaultContent();
+		driver.switchTo().defaultContent();
 		driver.findElementByLinkText("Download").click();
 
 	}

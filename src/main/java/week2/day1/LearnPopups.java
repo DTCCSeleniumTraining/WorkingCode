@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
-import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
 
 public class LearnPopups {
 	
@@ -32,16 +31,7 @@ public class LearnPopups {
 		System.out.println(driver.getCurrentUrl());
 		driver.switchTo().window(parentWindow);
 		System.out.println(driver.getTitle());
-		System.out.println(driver.getCurrentUrl());
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println(driver.getCurrentUrl());		
 	}
 
 }

@@ -1,0 +1,1 @@
+java -jar selenium-server-standalone-3.8.0.jar -role wd -hub http://192.168.43.8:4875/grid/register/ -port 5557 -timeout 30 -maxSession 2 -browser browserName=edge,maxInstances=3,platform=WINDOWS
